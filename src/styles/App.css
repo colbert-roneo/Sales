@@ -1,0 +1,78 @@
+.app-container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.main-paper {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header-form,
+.detail-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-form h2,
+.detail-form h2 {
+  color: #1976d2;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1976d2;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.printable-voucher {
+  background: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media print {
+  .app-container {
+    background: white;
+    padding: 0;
+  }
+  
+  .main-paper {
+    box-shadow: none;
+  }
+  
+  .printable-voucher {
+    box-shadow: none;
+    border: none;
+  }
+  
+  button {
+    display: none !important;
+  }
+}
+
+.MuiTableCell-root {
+  padding: 8px !important;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+.MuiButton-root {
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
